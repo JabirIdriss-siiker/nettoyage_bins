@@ -88,7 +88,7 @@ const Hero = () => {
           >
             <div className="relative">
               <motion.img
-                src="./public/bin.jpg"
+                src="bin.jpg"
                 alt="Bacs propres et désinfectés"
                 className="rounded-xl shadow-xl w-full h-auto"
                 whileHover={{ scale: 1.02 }}

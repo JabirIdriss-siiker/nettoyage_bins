@@ -4,15 +4,15 @@ import { motion } from 'framer-motion';
 const Gallery = () => {
   const images = [
     {
-      src: '/public/rs=w_814,h_407,cg_true.webp',
+      src: 'rs=w_814,h_407,cg_true.webp',
       alt: 'Bacs propres après nettoyage'
     },
     {
-      src: '/public/bin.jpg',
+      src: 'bin.jpg',
       alt: 'Nettoyage haute pression'
     },
     {
-      src: '/public/envirobinz-before-and-after.jpg',
+      src: 'envirobinz-before-and-after.jpg',
       alt: 'Bacs propres après nettoyage'
     },
     
