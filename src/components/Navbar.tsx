@@ -54,7 +54,7 @@ const Navbar = () => {
               <Recycle className="h-6 w-6 text-white" />
             </div>
             <span className={`font-bold text-xl ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
-              CleanBac Pro
+              CleanBac
             </span>
           </motion.div>
 

@@ -42,7 +42,7 @@ const Footer = () => {
               <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 p-3 rounded-xl">
                 <Recycle className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold">CleanBac Pro</h3>
+              <h3 className="text-2xl font-bold">CleanBac</h3>
             </div>
             <p className="text-gray-300 text-lg leading-relaxed mb-6 max-w-md">
               Bacs propres, sans effort. Service professionnel depuis 2020.
@@ -50,15 +50,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-emerald-400" />
-                <span className="text-gray-300">01 23 45 67 89</span>
+                <span className="text-gray-300">07 51 24 42 92</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-emerald-400" />
-                <span className="text-gray-300">contact@cleanbacpro.fr</span>
+                <span className="text-gray-300">contact@locasomme.fr</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-emerald-400" />
-                <span className="text-gray-300">Île-de-France</span>
+                <span className="text-gray-300">Amiens</span>
               </div>
             </div>
           </motion.div>
@@ -137,7 +137,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <p>© {currentYear} CleanBac Pro. Tous droits réservés.</p>
+              <p>© {currentYear} CleanBac. Tous droits réservés.</p>
             </motion.div>
           </div>
         </div>
