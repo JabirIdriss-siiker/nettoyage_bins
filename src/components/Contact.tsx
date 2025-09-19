@@ -6,6 +6,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     address: '',
     message: ''
   });
@@ -17,30 +18,47 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Formspree integration would go here
-    console.log('Form submitted:', formData);
-    alert('Merci pour votre message ! Nous vous recontacterons rapidement.');
-  };
 
+    try {
+      const response = await fetch("https://formspree.io/f/mldwqwel", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Merci pour votre message ! Nous vous recontacterons rapidement.");
+        setFormData({ name: "", email: "", phone: "", address: "", message: "" });
+      } else {
+        alert("Une erreur est survenue. Veuillez réessayer.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Impossible d’envoyer le formulaire. Vérifiez votre connexion.");
+    }
+  };
   const contactInfo = [
     {
       icon: Phone,
       title: 'Téléphone',
-      content: '01 23 45 67 89',
+      content: '07 51 24 42 92',
       color: 'emerald'
     },
     {
       icon: Mail,
       title: 'Email',
-      content: 'contact@cleanbacpro.fr',
+      content: 'contact@locasomme.fr',
       color: 'cyan'
     },
     {
       icon: MapPin,
       title: 'Zone d\'intervention',
-      content: 'Île-de-France et régions limitrophes',
+      content: 'Amiens et régions',
       color: 'blue'
     }
   ];
@@ -110,6 +128,7 @@ const Contact = () => {
           </motion.div>
 
           {/* Contact Form */}
+          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -122,10 +141,7 @@ const Contact = () => {
               </h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <motion.div
-                  whileFocus={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <motion.div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Nom complet *
                   </label>
@@ -141,10 +157,7 @@ const Contact = () => {
                   />
                 </motion.div>
 
-                <motion.div
-                  whileFocus={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <motion.div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email *
                   </label>
@@ -161,11 +174,23 @@ const Contact = () => {
                 </motion.div>
               </div>
 
-              <motion.div
-                className="mb-6"
-                whileFocus={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-              >
+              <motion.div className="mb-6">
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  Téléphone *
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                  placeholder="Votre numéro de téléphone"
+                />
+              </motion.div>
+
+              <motion.div className="mb-6">
                 <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-2">
                   Adresse *
                 </label>
@@ -181,11 +206,7 @@ const Contact = () => {
                 />
               </motion.div>
 
-              <motion.div
-                className="mb-6"
-                whileFocus={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-              >
+              <motion.div className="mb-6">
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message
                 </label>

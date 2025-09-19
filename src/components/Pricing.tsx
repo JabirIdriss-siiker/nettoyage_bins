@@ -6,7 +6,7 @@ const Pricing = () => {
   const plans = [
     {
       name: 'Abonnement',
-      price: '15€',
+      price: '40€',
       period: '/mois',
       description: 'Le plus économique',
       features: [

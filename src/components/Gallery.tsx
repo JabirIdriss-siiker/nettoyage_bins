@@ -4,29 +4,18 @@ import { motion } from 'framer-motion';
 const Gallery = () => {
   const images = [
     {
-      src: 'https://images.pexels.com/photos/4099089/pexels-photo-4099089.jpeg?auto=compress&cs=tinysrgb&w=600',
+      src: '/public/rs=w_814,h_407,cg_true.webp',
       alt: 'Bacs propres après nettoyage'
     },
     {
-      src: 'https://images.pexels.com/photos/6197119/pexels-photo-6197119.jpeg?auto=compress&cs=tinysrgb&w=600',
-      alt: 'Équipe de nettoyage professionnelle'
-    },
-    {
-      src: 'https://images.pexels.com/photos/4491459/pexels-photo-4491459.jpeg?auto=compress&cs=tinysrgb&w=600',
+      src: '/public/bin.jpg',
       alt: 'Nettoyage haute pression'
     },
     {
-      src: 'https://images.pexels.com/photos/6196959/pexels-photo-6196959.jpeg?auto=compress&cs=tinysrgb&w=600',
-      alt: 'Matériel de nettoyage professionnel'
+      src: '/public/envirobinz-before-and-after.jpg',
+      alt: 'Bacs propres après nettoyage'
     },
-    {
-      src: 'https://images.pexels.com/photos/5218502/pexels-photo-5218502.jpeg?auto=compress&cs=tinysrgb&w=600',
-      alt: 'Résultat final bacs propres'
-    },
-    {
-      src: 'https://images.pexels.com/photos/6196954/pexels-photo-6196954.jpeg?auto=compress&cs=tinysrgb&w=600',
-      alt: 'Service de nettoyage en action'
-    }
+    
   ];
 
   return (
@@ -82,7 +71,7 @@ const Gallery = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <p className="text-gray-600 text-lg">
-            <span className="font-bold text-emerald-600">500+ clients</span> déjà conquis
+            <span className="font-bold text-emerald-600">40+ clients</span> déjà conquis
           </p>
         </motion.div>
       </div>
