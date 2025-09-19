@@ -47,7 +47,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-              Fini les odeurs ! Service professionnel dès 15€/mois.
+              Fini les odeurs ! Service professionnel dès 25€/mois.
             </motion.p>
 
             <motion.div
